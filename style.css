@@ -1,0 +1,59 @@
+body{
+    background-image: linear-gradient(to left, #220b4d, #fc3ff5);
+  }
+  
+  .titulo{
+    background-color: white;
+    text-align: center;
+  }
+
+  .descricao{
+    background-color: rgb(199, 156, 190);
+    text-align: center;
+  }
+
+  .coracao{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 100px auto;
+    transform: rotate(45deg);
+    position: relative;
+    animation: coracao 1s infinite alternate ease;
+    box-shadow: 2px 2px 50px;
+    border-radius: 5px;
+  }
+  
+  .coracao:after, .coracao:before {
+    content: "//////";
+    width: 201px;
+    height: 201px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: -1px 0px 3px ;
+    border: 0px;
+    font-size: 2.5em;
+    text-align:center;
+    color: #ff0000;
+    text-shadow: 3px 20px white;
+  }
+  
+  .coracao:after{
+    left: -100px;
+  }
+  
+  .coracao:before{
+    top: -100px;
+  }
+  
+  @keyframes coracao {
+    0% {
+      transform: scale(.5)
+        rotate(45deg);
+        }
+    100%{
+     transform: scale(1)
+       rotate(45deg);
+        }
+  }
